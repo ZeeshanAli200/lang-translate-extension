@@ -9,8 +9,8 @@
     "include": [
       "src/**/*.ts",
       "src/**/*.tsx"
-
-    ],
+, "src/background/background.js"
+, "src/contentScript/index.js"    ],
     "exclude": [
       "node_modules"
     ]

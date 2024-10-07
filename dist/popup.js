@@ -15,22 +15,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
-// import { onclickFunc } from "../contentScript";
 const App = () => {
-    const onclickFunc = () => {
-        console.log("hello");
-        let ptag = document.querySelectorAll("p");
-        for (let i = 0; i < ptag.length; i++) {
-            if (ptag[i].innerHTML.includes("The script itself is fairly simple:")) {
-                ptag[i].innerHTML = ptag[i].innerHTML.replace(ptag[i].innerHTML, "<h1>Script is replaced</h1>");
-            }
-        }
-    };
     return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null,
-        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", { onClick: onclickFunc, className: "cursor-pointer" },
-            "Popup",
-            " "),
-        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", { className: "text-green-300" }, "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum ut magnam vel tempora? Pariatur, eius cumque nemo veritatis quasi porro voluptatibus. Ullam explicabo molestiae dolorem soluta, iste repellat praesentium aspernatur.")));
+        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", { id: "google_translate_element" })));
 };
 
 

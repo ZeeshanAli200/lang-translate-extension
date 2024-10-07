@@ -9,18 +9,21 @@
     "128": "icon.png"
   },
   "action": {
-    "default_title": "Click me",
-    "default_popup": "popup.html"
+    "default_title": "Click me"
   },
-  "permissions": ["tabs", "bookmarks"],
+  "permissions": ["tabs","activeTab", "bookmarks","scripting","notifications"],
+  
   "background": {
     "service_worker": "background.js"
   },
+  "host_permissions": ["https://translate.google.com/*"],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["contentScript.js"]
+      "js": ["contentScript.js"],
+      "world":"MAIN"
     }
   ],
+
   "options_page": "options.html"
 }

@@ -1,6 +1,6 @@
 /******/ (() => { // webpackBootstrap
 /*!**************************************!*\
-  !*** ./src/background/background.ts ***!
+  !*** ./src/background/background.js ***!
   \**************************************/
 chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
   console.log({ tabs });
@@ -9,6 +9,8 @@ chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
 chrome.bookmarks.onCreated.addListener(function (bookmark) {
   console.log({ bookmark });
 });
+
+
 
 /******/ })()
 ;

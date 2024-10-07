@@ -1,7 +1,3 @@
-/******/ (() => { // webpackBootstrap
-/*!************************************!*\
-  !*** ./src/contentScript/index.js ***!
-  \************************************/
 console.log("loaded");
 
 
@@ -81,6 +77,3 @@ divEle.appendChild(spanEle)
     script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
     document.body.appendChild(scriptFunc)
     document.body.appendChild(script)
-/******/ })()
-;
-//# sourceMappingURL=contentScript.js.map

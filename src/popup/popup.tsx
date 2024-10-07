@@ -5,6 +5,8 @@ import "../assets/tailwind.css";
 const Popup = <App />;
 const root = document.createElement("div");
 root.className = "container";
+
 document.body.appendChild(root);
+
 const rootDiv = ReactDOM.createRoot(root);
 rootDiv.render(Popup);
