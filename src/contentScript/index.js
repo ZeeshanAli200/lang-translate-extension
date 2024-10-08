@@ -13,6 +13,12 @@ console.log("loaded");
     )
   }`
 
+
+  
+  // .goog-te-banner-frame .skiptranslate {
+  //   display: none !important;
+  //   } 
+
   const div=document.createElement('div');
   const google_translate_element=document.createElement('div');
   google_translate_element.id='google_translate_element';
@@ -21,16 +27,26 @@ console.log("loaded");
   div.style.position='fixed'
   div.style.right='0'
   div.style.padding="20px"
+  div.style.borderTopLeftRadius="10px"
+  div.style.borderBottomLeftRadius="10px"
+
+
   div.style.boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px";
 
   const divEle=document.createElement('div');
   divEle.style.position='relative'
   const spanEle=document.createElement('span');
-  spanEle.innerHTML=">";
+
+  var image = document.createElement("img");
+image.src ="https://res.cloudinary.com/davcfrxgy/image/upload/v1728413736/6488674_cidnc8.png"
+image.width=20
+image.height=20
+spanEle.appendChild(image)
   spanEle.style.position="absolute";
   spanEle.style.right="-10px";
   spanEle.style.top="-15px";
   spanEle.style.fontWeight='bolder'
+  spanEle.className="bg-red-100"
 
   spanEle.onclick=()=>{
     toggle(google_translate_element)
@@ -77,3 +93,6 @@ divEle.appendChild(spanEle)
     script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
     document.body.appendChild(scriptFunc)
     document.body.appendChild(script)
+
+
+  

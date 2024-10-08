@@ -6,7 +6,7 @@ module.exports = {
   mode: "development",
   devtool: "cheap-module-source-map",
   entry: {
-    // popup: path.resolve("./src/popup/popup.tsx"),
+    popup: path.resolve("./src/popup/popup.tsx"),
     options: path.resolve("./src/options/options.tsx"),
     background: path.resolve("./src/background/background.js"),
     contentScript: path.resolve("./src/contentScript/index.js")
@@ -48,7 +48,7 @@ module.exports = {
     ...getHtmlPlugins(["popup", "options"])
   ],
   resolve: {
-    extensions: [".ts", ".tsx", ".js"]
+    extensions: [".ts", ".tsx", ".js",".css"]
   },
   output: {
     filename: "[name].js"
